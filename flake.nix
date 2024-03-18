@@ -5,7 +5,7 @@
     kioskBase.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, myBaseEnv, ... }: {
+  outputs = { self, nixpkgs, kioskBase, ... }: {
     nixosConfigurations.mySystem = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
