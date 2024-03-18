@@ -13,7 +13,7 @@
         ./hardware-configuration.nix # The consumer's specific hardware configuration
         ({ pkgs, ... }: {
           # Any additional system-specific configuration
-          networking.hostName = "IOTVignette";
+          networking.hostName = pkgs.mkForce "IOTVignette";
         })
       ];
     };
