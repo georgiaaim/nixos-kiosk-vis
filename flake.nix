@@ -6,13 +6,14 @@
   };
 
   outputs = { self, nixpkgs, kioskBase, ... }: {
-    nixosConfigurations.mySystem = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.IOTVignette = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         kioskBase.nixosModules.baseEnvironment
         ./hardware-configuration.nix # The consumer's specific hardware configuration
         ({ pkgs, ... }: {
           # Any additional system-specific configuration
+          networking.hostName = "IOTVignette";
         })
       ];
     };
