@@ -1,0 +1,70 @@
+{
+  "nodes": {
+    "home-manager": {
+      "inputs": {
+        "nixpkgs": [
+          "kioskBase",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1710164657,
+        "narHash": "sha256-l64+ZjaQAVkHDVaK0VHwtXBdjcBD6nLBD+p7IfyBp/w=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "017b12de5b899ef9b64e2c035ce257bfe95b8ae2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "kioskBase": {
+      "inputs": {
+        "home-manager": "home-manager",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1710780313,
+        "narHash": "sha256-3S0XepFhBkgpj43T5Md8RKMz8GvFtpHbLQgvivTfaVM=",
+        "owner": "georgiaaim",
+        "repo": "nixos-kiosk-base",
+        "rev": "50a4fb8e874798520dab887946eb15acf0f91c57",
+        "type": "github"
+      },
+      "original": {
+        "owner": "georgiaaim",
+        "repo": "nixos-kiosk-base",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1710631334,
+        "narHash": "sha256-rL5LSYd85kplL5othxK5lmAtjyMOBg390sGBTb3LRMM=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "c75037bbf9093a2acb617804ee46320d6d1fea5a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "kioskBase": "kioskBase",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
