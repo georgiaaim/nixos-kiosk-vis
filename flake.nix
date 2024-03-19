@@ -6,14 +6,14 @@
   };
 
   outputs = { self, nixpkgs, kioskBase, ... }: {
-    nixosConfigurations.IOTVignette = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.VisionVignette = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         kioskBase.nixosModules.baseEnvironment
         ./hardware-configuration.nix # The consumer's specific hardware configuration
         ({ pkgs, lib, ... }: {
           # Any additional system-specific configuration
-          networking.hostName = lib.mkForce "IOTVignette";
+          networking.hostName = lib.mkForce "VisionVignette";
         })
       ];
     };
